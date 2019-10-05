@@ -24,7 +24,7 @@ npm update webpack    //更新包
 npm search webpack    //搜索包
 npm install 可以package.json 文件安装对应的模块。
 ~~~~
-####package.json 文件解释
+#### package.json 文件解释
 ~~~~
 {
   "name": "webpackstudy", //包名
@@ -61,7 +61,7 @@ npm install 可以package.json 文件安装对应的模块。
 }
 ~~~~
 
-####网页中引用的静态文件有哪些？
+#### 网页中引用的静态文件有哪些？
 ~~~~
 js
 css
@@ -73,20 +73,20 @@ sass
 scss
 html中无法把vue中的模板抽离处理，但是结合webpack可以实现vue组件的抽离。
 ~~~~
-####网页中引用的静态文件多的时候有有哪些问题？
+#### 网页中引用的静态文件多的时候有有哪些问题？
 
 ~~~~
 1）加载速度慢，发起很多次请求。
 2）处理文件的依赖关系
 解决这些问题可以，合并css文件，js文件，使用精灵图片，base64图片编码。
 ~~~~
-####webpack能够解决的问题？
+#### webpack能够解决的问题？
 ~~~~
 借助于webpack前端自动化工具，可以完美的实现资源的合并、打包、压缩、混淆等诸多功能，
 webpack是基于node.js开发出的一个前端工具，因此使用webpack需要安装node环境。
 ~~~~
 
-#####html-webpack-plugin 根据模板生成html内容
+##### html-webpack-plugin 根据模板生成html内容
 ~~~~
 webpack 插件，根据模板在内存中生成html文件
 1）cpnm install html-webpack-plugin -D
@@ -99,7 +99,7 @@ plugins: [//配置插件
 ]
 ~~~~
 
-#####webpack-dev-server 实时编译打包
+##### webpack-dev-server 实时编译打包
 ~~~~ 
 本地搭建http服务，根据webpack.config.js 配置文件把输出内容保存到内存中
 1）cnpm install webpack-dev-server -D 本地安装
@@ -130,7 +130,7 @@ plugins: [//配置插件
          ]
 ~~~~
 
-####css文件处理
+#### css文件处理
 ~~~~
 1)cnpm install css-loader style-loader -D
 2)在webpack.config.js中配置loader规则
@@ -143,7 +143,7 @@ plugins: [//配置插件
 },//处理css文件的loader配置
 ~~~~
 
-####less文件处理
+#### less文件处理
 ~~~~
 1)cnpm install css-loader style-loader less-loader -D
 2)在webpack.config.js中配置loader规则
@@ -157,7 +157,7 @@ plugins: [//配置插件
 },//处理less文件的loader配置
 ~~~~
 
-####scss文件处理
+#### scss文件处理
 ~~~~
 1)cnpm install css-loader style-loader sass-loader -D
 2)在webpack.config.js中配置loader规则
