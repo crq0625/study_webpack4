@@ -14,3 +14,37 @@ $(function () {
         return '#'+'00ff00';
     });
 })
+
+/**
+//es5中类的构造函数
+function Animal(name) {
+    this.name = name;
+}
+
+var al = new Animal('小花');
+
+
+//es6中的类
+class AnimalClass { //类声明
+    constructor() {//构造方法
+        console.log('构造方法'); // 42
+    }
+    static classMethod(){
+        //静态方法
+        return 'hello';
+    }
+    myProp = 42; //实例属性
+    static myStaticProp = 42;//静态属性，可以通过类名直接访问。Person.info
+}
+
+class Dog extends AnimalClass{
+    constructor(props){
+        super(props);
+        this.state = {
+            count: 0
+        };
+    }
+}
+
+var p1 = new AnimalClass();
+ */

@@ -11,7 +11,7 @@ nrm del 源名  //删除源
 nrm test 源名 //测试源的速度
 ~~~~~~
 
-#### npm命令
+####npm命令
 ~~~~
 npm info 包名         //查看包信息
 npm install 包名      //安装包
@@ -23,7 +23,6 @@ npm update webpack    //更新包
 npm search webpack    //搜索包
 npm install 可以package.json 文件安装对应的模块。
 ~~~~
-
 ####package.json 文件解释
 ~~~~
 {
@@ -102,7 +101,8 @@ plugins: [//配置插件
 #####webpack-dev-server 实时编译打包
 ~~~~ 
 本地搭建http服务，根据webpack.config.js 配置文件把输出内容保存到内存中
-而webpack是保存到硬盘中。常用参数如下
+1）cnpm install webpack-dev-server -D 本地安装
+2）而webpack是保存到硬盘中。常用参数如下
     --open 自动打开浏览器
     --port 3000 自定义端口
     --contentBase src 自定义服务器目录
