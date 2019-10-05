@@ -2,11 +2,15 @@
 // 1. 导入jquery
 //import ** from ** es6语法
 import $ from 'jquery'
-import './css/index.css'
+// import './css/index.css'
 //webpack 只能处理js文件，非js文件需要引入合适的loader加载器
 //处理css文件需要引入css-loader 和 style-loader
+
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './css/index.less'
-import './css/index.scss'
+// import './css/index.scss'
+// 通过路径形式引入node_modules 可以省略node_modules目录
+
 
 $(function () {
     $('li:odd').css('backgroundColor','red');

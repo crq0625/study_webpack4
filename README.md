@@ -130,6 +130,11 @@ plugins: [//配置插件
          ]
 ~~~~
 
+#### loader 加载规则
+~~~~
+loader从最后一个向前加载
+~~~~
+
 #### css文件处理
 ~~~~
 1)cnpm install css-loader style-loader -D
@@ -169,4 +174,30 @@ plugins: [//配置插件
         {loader: "sass-loader"}
     ]
 }//处理less文件的loader配置
+~~~~
+
+#### css 文件中的URL地址处理使用url-loader。
+~~~~
+1）cnpm install url-loader file-loader -D
+2) {
+       test :/\.(jpg|png|gif|bmp|jpeg)/,
+       use:[
+           {
+               loader: "url-loader",
+               options: {
+                   limit: '40000',// 表示小于50kb的图片转为base64,大于40kb的是路径
+                   name: '[name]_[hash].[ext]?[hash]',
+                   //outputPath:'images' //定义输出的图片文件夹
+               }
+           }
+           ]
+   },//图片URL处理
+   {
+       test:/\.(ttf|eot|woff|svg)$/i,
+       use:[
+           {
+               loader: "url-loader",
+           }
+       ]
+   }//字体URL处理
 ~~~~

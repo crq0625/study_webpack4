@@ -32,7 +32,28 @@ module.exports = {
                     {loader: "css-loader"},
                     {loader: "sass-loader"}
                 ]
-            }//处理less文件的loader配置
+            },//处理less文件的loader配置
+            {
+                test :/\.(jpg|png|gif|bmp|jpeg)/,
+                use:[
+                    {
+                        loader: "url-loader",
+                        options: {
+                            limit: '40000',// 表示小于50kb的图片转为base64,大于40kb的是路径
+                            name: '[name]_[hash].[ext]?[hash]',
+                            //outputPath:'images' //定义输出的图片文件夹
+                        }
+                    }
+                    ]
+            },//图片URL处理
+            {
+                test:/\.(ttf|eot|woff|svg)$/i,
+                use:[
+                    {
+                        loader: "url-loader",
+                    }
+                ]
+            }//字体URL处理
         ]
     },
     plugins: [//配置插件
