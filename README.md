@@ -201,3 +201,25 @@ loader从最后一个向前加载
        ]
    }//字体URL处理
 ~~~~
+
+#### es6高级语法处理
+~~~~
+1）安装babel，转换es6到es5语法。
+npm install babel-loader@8.0.0-beta.0 @babel/core @babel/preset-env webpack
+npm install --save @babel/runtime
+npm install --save-dev @babel/plugin-transform-runtime
+@babel/preset-env     babel转码规则
+2)webpack.config.js 配置选项
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,//不处理的目录
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                        plugins: ['@babel/transform-runtime']
+                    }
+                }
+            }//babel 语法转换规则处理
+~~~~
+

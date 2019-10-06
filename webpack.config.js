@@ -53,7 +53,18 @@ module.exports = {
                         loader: "url-loader",
                     }
                 ]
-            }//字体URL处理
+            },//字体URL处理
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,//不处理的目录
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                        plugins: ['@babel/transform-runtime']
+                    }
+                }
+            }//babel 语法转换规则处理
         ]
     },
     plugins: [//配置插件

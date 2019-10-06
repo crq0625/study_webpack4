@@ -26,20 +26,22 @@ function Animal(name) {
 }
 
 var al = new Animal('小花');
-
+ */
 
 //es6中的类
 class AnimalClass { //类声明
     constructor() {//构造方法
-        console.log('构造方法'); // 42
+        this.myProp = 42; //实例属性
     }
     static classMethod(){
         //静态方法
+        console.log('静态方法调用');
         return 'hello';
     }
-    myProp = 42; //实例属性
-    static myStaticProp = 42;//静态属性，可以通过类名直接访问。Person.info
+    // myProp = 42; //实例属性
+    // static myStaticProp = 42;//静态属性，可以通过类名直接访问。Person.info
 }
+AnimalClass.myStaticProp = 42;//静态属性，可以通过类名直接访问。Person.info
 
 class Dog extends AnimalClass{
     constructor(props){
@@ -49,6 +51,6 @@ class Dog extends AnimalClass{
         };
     }
 }
-
-var p1 = new AnimalClass();
- */
+AnimalClass.classMethod();
+const p1 = new AnimalClass();
+console.log(p1.myProp);
